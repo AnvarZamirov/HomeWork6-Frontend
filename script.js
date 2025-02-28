@@ -1,23 +1,70 @@
+// Задача 1:
+function checkEvenOdd(num) {
+    if (num % 2 === 0) {
+        return "Четное";
+    } else {
+        return "Нечетное";
+    }
+}
 
-let employees = [
-    { name: "Анвар", age: 30, gender: "мужской", phone: { home: "123-45-67", mobile: "89012345678" } },
-    { name: "Аяна", age: 25, gender: "женский", phone: { home: "234-56-78", mobile: "89023456789" } },
-    { name: "Ильгиз", age: 28, gender: "мужской", phone: { home: "345-67-89", mobile: "89034567890" } },
-    { name: "Алтя", age: 22, gender: "женский", phone: { home: "456-78-90", mobile: "89045678901" } },
-    { name: "Аалам", age: 35, gender: "мужской", phone: { home: "567-89-01", mobile: "89056789012" } }
-];
+// Задача 2:
+function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    var result = 1;
+    for (var i = 2; i <= n; i++) {
+        result = result * i;
+    }
+    return result;
+}
 
-employees.push({
-    name: "Айдар",
-    age: 27,
-    gender: "муржской",
-    phone: { home: "678-90-12", mobile: "89067890123" }
-});
+// Задача 3:
+function findMax(arr) {
+    if (arr.length === 0) {
+        return undefined;
+    }
+    var max = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
 
-let olderThan25 = employees.filter(emp => emp.age > 25);
+// Задача 4: Подсчет числа гласных в строке
+function countVowels(str) {
+    var vowels = "aeiouAEIOU";
+    var count = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (vowels.indexOf(str[i]) !== -1) {
+            count++;
+        }
+    }
+    return count;
+}
 
-let employeeNames = employees.map(emp => emp.name);
+// Задача 6:
+function sumArray(arr) {
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
 
-employees.forEach(emp => {
-    console.log(`Имя: ${emp.name}, Возраст: ${emp.age}, Пол: ${emp.gender}, Домашний: ${emp.phone.home}, Сотовый: ${emp.phone.mobile}`);
-});
+console.log(checkEvenOdd(4));   // "Четное"
+console.log(checkEvenOdd(7));   // "Нечетное"
+
+console.log(factorial(5));      // 120
+console.log(factorial(0));      // 1
+
+console.log(findMax([1, 5, 3, 9, 2])); // 9
+console.log(findMax([-5, -1, -8]));     // -1
+
+console.log(countVowels("hello"));  // 2
+console.log(countVowels("world"));  // 1
+
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
+console.log(sumArray([-1, -2, 3]));      // 0
