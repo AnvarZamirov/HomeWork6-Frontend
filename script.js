@@ -54,17 +54,17 @@ function sumArray(arr) {
     return sum;
 }
 
-console.log(checkEvenOdd(4));   // "Четное"
-console.log(checkEvenOdd(7));   // "Нечетное"
+console.log(checkEvenOdd(4));
+console.log(checkEvenOdd(7));
 
-console.log(factorial(5));      // 120
-console.log(factorial(0));      // 1
+console.log(factorial(5));
+console.log(factorial(0));
 
-console.log(findMax([1, 5, 3, 9, 2])); // 9
-console.log(findMax([-5, -1, -8]));     // -1
+console.log(findMax([1, 5, 3, 9, 2]));
+console.log(findMax([-5, -1, -8]));
 
-console.log(countVowels("hello"));  // 2
-console.log(countVowels("world"));  // 1
+console.log(countVowels("hello"));
+console.log(countVowels("world"));
 
-console.log(sumArray([1, 2, 3, 4, 5])); // 15
-console.log(sumArray([-1, -2, 3]));      // 0
+console.log(sumArray([1, 2, 3, 4, 5]));
+console.log(sumArray([-1, -2, 3]));
